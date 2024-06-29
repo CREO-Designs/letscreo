@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        gilroy: ["var(--font-gilroy)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

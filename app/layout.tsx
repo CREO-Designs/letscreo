@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
+import { cn } from "@/lib/utils";
 
 const gilroy = localFont({
   src: [
@@ -31,7 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gilroy.variable}`}>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-gilroy antialiased",
+          gilroy.variable
+        )}
+      >
         <Navbar />
         {children}
       </body>
