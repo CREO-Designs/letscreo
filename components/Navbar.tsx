@@ -60,9 +60,9 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className="fixed flex w-full items-center justify-between bg-[#171717] px-4 py-[.62rem]">
+    <nav className="fixed flex w-full items-center justify-between bg-[#171717] px-4 py-[.62rem] md:px-14">
       <Image
-        className="h-[1.875rem] w-[4.9375rem]"
+        className="h-[1.875rem] w-[4.9375rem] md:h-[3.125rem] md:w-[9.375rem] 2xl:h-[4.125rem] 2xl:w-[10.5rem]"
         src={logo}
         alt="CREO logo"
         width={168}
