@@ -24,6 +24,20 @@ export const metadata: Metadata = {
   title: "CREO",
   description:
     "Your one-stop destination for cutting-edge design solutions that seamlessly blend creativity and efficiency.",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/favicon-light-theme.png",
+        href: "/images/favicon-light-theme.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/images/favicon-dark-theme.png",
+        href: "/images/favicon-dark-theme.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
