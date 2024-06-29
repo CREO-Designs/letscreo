@@ -50,7 +50,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-gilroy antialiased",
-          gilroy.variable
+          gilroy.variable,
         )}
       >
         <Navbar />

@@ -60,21 +60,20 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className="flex fixed w-full items-center bg-[#171717] justify-between px-4 py-[.62rem]">
+    <nav className="fixed flex w-full items-center justify-between bg-[#171717] px-4 py-[.62rem]">
       <Image
-        className="w-[4.9375rem] h-[1.875rem]"
+        className="h-[1.875rem] w-[4.9375rem]"
         src={logo}
         alt="CREO logo"
         width={168}
         height={66}
       />
-      <ul className="hidden md:flex flex-row justify-center items-center gap-12 text-white">
+      <ul className="hidden flex-row items-center justify-center gap-12 text-white md:flex">
         {navItems.map((item) => (
           <li key={item.name}>
             <Link
               href={item.href}
-              className="text-white hover:font-extrabold
-                  transition-colors duration-300"
+              className="text-white transition-colors duration-300 hover:font-extrabold"
             >
               {item.name}
             </Link>
@@ -85,15 +84,15 @@ export default function Navbar() {
       <div className="md:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <div className="p-2 border-[#484848] border rounded cursor-pointer">
-              <TiThMenu className="text-white " />
+            <div className="cursor-pointer rounded border border-[#484848] p-2">
+              <TiThMenu className="text-white" />
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56 border-[#484848] border rounded bg-[#1E1E1E] text-white relative bottom-10 right-3">
-            <ul className="flex-col flex justify-center items-start">
+          <DropdownMenuContent className="relative bottom-10 right-3 w-56 rounded border border-[#484848] bg-[#1E1E1E] text-white">
+            <ul className="flex flex-col items-start justify-center">
               {navItems.map((item) => (
                 <Link key={item.name} href={item.href} className="w-full">
-                  <li className="transition-colors px-[1.5rem] py-[.625rem] duration-300">
+                  <li className="px-[1.5rem] py-[.625rem] transition-colors duration-300">
                     {item.name}
                   </li>
                 </Link>
