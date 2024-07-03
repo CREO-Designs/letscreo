@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PromotionStrip() {
   return (
-    <div className="mb-10 bg-[#E14C57] px-4 py-3 text-center text-xs leading-tight text-white sm:text-xl">
+    <div className="bg-[#E14C57] px-4 py-3 text-center text-xs leading-tight text-white sm:text-xl">
       <span className="font-extrabold">
         Exclusive Offer for the First Time Clients:{" "}
       </span>
