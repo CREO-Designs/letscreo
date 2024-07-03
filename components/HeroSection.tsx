@@ -4,7 +4,7 @@ import banner from "@/public/banner.png";
 export default function HeroSection() {
   return (
     <>
-      {/* 95.65px padding on top for navbar display */}
+      {/* padding on top for navbar display */}
       <section
         id="home"
         className="flex w-full flex-col justify-center bg-[#1E1E1E] px-6 pb-9 pt-[5.589375rem] text-white sm:pb-[4.5rem] md:flex-row md:items-center md:justify-between md:gap-12 md:px-[5.25rem] md:pt-[6.839375rem] 2xl:px-[8.75rem] 2xl:pt-[7.839375rem]"
