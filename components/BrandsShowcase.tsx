@@ -21,7 +21,7 @@ export default function BrandsShowcase() {
     { src: image8, alt: "Praana" },
   ];
   return (
-    <section className="mb-[10rem] px-4 pt-9 sm:px-8 sm:pt-16 md:px-14 lg:px-[88px] lg:pt-20 xl:px-[204px]">
+    <section className="px-4 pt-9 sm:px-8 sm:pt-16 md:px-14 lg:px-[88px] lg:pt-20 xl:px-[204px]">
       <h2 className="mb-5 text-center text-base font-extrabold text-blue-950 sm:mb-10 sm:text-2xl md:mb-12 md:text-4xl lg:mb-[54px] lg:text-[40px]">
         Brands That Love Our Designs
       </h2>
