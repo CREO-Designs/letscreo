@@ -1,5 +1,3 @@
-import React from "react";
-
 type HeadingPropsType = { children: React.ReactNode; className?: string };
 
 export default function Heading({

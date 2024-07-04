@@ -9,6 +9,7 @@ import image6 from "@/public/brands/swapnil-patni-classes.png";
 import image7 from "@/public/brands/bct.png";
 import image8 from "@/public/brands/praana.png";
 import Heading from "./Heading";
+import Section from "./Section";
 
 export default function BrandsShowcase() {
   const brands = [
@@ -22,7 +23,7 @@ export default function BrandsShowcase() {
     { src: image8, alt: "Praana" },
   ];
   return (
-    <section className="px-4 pt-9 sm:px-8 sm:pt-16 md:px-14 lg:px-[88px] lg:pt-20 xl:px-[204px]">
+    <Section>
       <Heading>Brands That Love Our Designs</Heading>
       <div className="grid grid-cols-3 justify-items-center gap-x-5 gap-y-2 rounded-[10px] bg-white py-4 shadow sm:gap-x-[72px] sm:gap-y-3 md:grid-cols-4 md:gap-x-[54px] md:gap-y-8 lg:gap-x-20 lg:gap-y-10">
         {brands.map((brand) => {
@@ -41,6 +42,6 @@ export default function BrandsShowcase() {
           );
         })}
       </div>
-    </section>
+    </Section>
   );
 }
