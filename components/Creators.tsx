@@ -180,7 +180,7 @@ export default function Creators() {
         {creators.map((creator) => (
           <Box
             key={creator.name}
-            className="flex items-center justify-start gap-[10px] p-4 md:gap-[18px] md:p-6 lg:gap-6 lg:p-[30px]"
+            className="group flex items-center justify-start gap-[10px] p-4 transition hover:bg-[#1B2B53] md:gap-[18px] md:p-6 lg:gap-6 lg:p-[30px]"
           >
             <Image
               className="h-14 w-14 rounded-full md:h-20 md:w-20"
@@ -190,7 +190,7 @@ export default function Creators() {
               height={80}
             />
             <div className="flex flex-col">
-              <span className="break-words text-base font-extrabold text-neutral-900 md:text-2xl">
+              <span className="break-words text-base font-extrabold text-neutral-900 group-hover:text-white md:text-2xl">
                 {creator.name}
               </span>
               <div className="flex items-center gap-1">
@@ -203,7 +203,7 @@ export default function Creators() {
                     height={20}
                   />
                 )}
-                <span className="break-words text-xs font-light text-neutral-900 md:text-lg">
+                <span className="break-words text-xs font-light text-neutral-900 group-hover:text-white md:text-lg">
                   {creator.description}
                 </span>
               </div>
