@@ -60,7 +60,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className="fixed flex w-full items-center justify-center bg-[#171717]">
+    <nav className="fixed z-50 flex w-full items-center justify-center bg-[#171717]">
       <div className="flex w-full max-w-[1780px] items-center justify-between px-4 py-[.62rem] md:px-14">
         <Image
           className="h-[1.875rem] w-[4.9375rem] md:h-[3.125rem] md:w-[9.375rem] 2xl:h-[4.125rem] 2xl:w-[10.5rem]"
