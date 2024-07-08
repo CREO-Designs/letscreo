@@ -38,7 +38,7 @@ export default function Pricing() {
         {pricing.map((item) => (
           <Card
             key={item.title}
-            className="flex flex-col items-center justify-center px-6 py-9 sm:px-6 sm:py-8 md:px-9 md:py-16"
+            className="group flex flex-col items-center justify-center px-6 py-9 transition-all hover:shadow-lg sm:px-6 sm:py-8 md:px-9 md:py-16"
           >
             <h3 className="mb-[10px] text-center text-base font-extrabold uppercase text-blue-950 sm:text-xl md:text-[32px]">
               {item.title}
@@ -59,7 +59,7 @@ export default function Pricing() {
               {item.description}
             </span>
             <Link href={item.link}>
-              <button className="rounded border-2 border-rose-500 px-[18px] py-3 text-center text-sm font-extrabold leading-none text-rose-500 hover:bg-rose-500 hover:text-white hover:shadow sm:px-6 sm:py-4 sm:text-base md:px-8 md:py-3 md:text-2xl">
+              <button className="rounded border-2 border-rose-500 px-[18px] py-3 text-center text-sm font-extrabold leading-none text-rose-500 transition-colors group-hover:bg-rose-500 group-hover:text-white group-hover:shadow sm:px-6 sm:py-4 sm:text-base md:px-8 md:py-3 md:text-2xl">
                 Learn More
               </button>
             </Link>
