@@ -1,4 +1,5 @@
 import BrandsShowcase from "@/components/BrandsShowcase";
+import Creators from "@/components/Creators";
 import HeroSection from "@/components/HeroSection";
 import PromotionStrip from "@/components/PromotionStrip";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <PromotionStrip />
       <BrandsShowcase />
+      <Creators />
     </main>
   );
 }
