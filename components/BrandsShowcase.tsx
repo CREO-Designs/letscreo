@@ -10,6 +10,7 @@ import image7 from "@/public/brands/bct.png";
 import image8 from "@/public/brands/praana.png";
 import Heading from "./Heading";
 import Section from "./Section";
+import Box from "./Box";
 
 export default function BrandsShowcase() {
   const brands = [
@@ -25,7 +26,7 @@ export default function BrandsShowcase() {
   return (
     <Section>
       <Heading>Brands That Love Our Designs</Heading>
-      <div className="grid grid-cols-3 justify-items-center gap-x-5 gap-y-2 rounded-[10px] bg-white py-4 shadow sm:gap-x-[72px] sm:gap-y-3 md:grid-cols-4 md:gap-x-[54px] md:gap-y-8 lg:gap-x-20 lg:gap-y-10">
+      <Box className="grid grid-cols-3 justify-items-center gap-x-5 gap-y-2 py-4 sm:gap-x-[72px] sm:gap-y-3 md:grid-cols-4 md:gap-x-[54px] md:gap-y-8 lg:gap-x-20 lg:gap-y-10">
         {brands.map((brand) => {
           return (
             <div
@@ -41,7 +42,7 @@ export default function BrandsShowcase() {
             </div>
           );
         })}
-      </div>
+      </Box>
     </Section>
   );
 }
