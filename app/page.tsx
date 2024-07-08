@@ -3,6 +3,7 @@ import Creators from "@/components/Creators";
 import HeroSection from "@/components/HeroSection";
 import Pricing from "@/components/Pricing";
 import PromotionStrip from "@/components/PromotionStrip";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <BrandsShowcase />
       <Creators />
       <Pricing />
+      <Services />
     </main>
   );
 }
