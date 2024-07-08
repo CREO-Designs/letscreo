@@ -1,6 +1,7 @@
 import BrandsShowcase from "@/components/BrandsShowcase";
 import Creators from "@/components/Creators";
 import HeroSection from "@/components/HeroSection";
+import Pricing from "@/components/Pricing";
 import PromotionStrip from "@/components/PromotionStrip";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <PromotionStrip />
       <BrandsShowcase />
       <Creators />
+      <Pricing />
     </main>
   );
 }
