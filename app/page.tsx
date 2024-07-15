@@ -1,3 +1,4 @@
+import Benefits from "@/components/Benefits";
 import BrandsShowcase from "@/components/BrandsShowcase";
 import Creators from "@/components/Creators";
 import HeroSection from "@/components/HeroSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <Creators />
       <Pricing />
       <Services />
+      <Benefits />
     </main>
   );
 }
