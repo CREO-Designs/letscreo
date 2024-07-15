@@ -1,5 +1,6 @@
 import Benefits from "@/components/Benefits";
 import BrandsShowcase from "@/components/BrandsShowcase";
+import Clients from "@/components/Clients";
 import Creators from "@/components/Creators";
 import HeroSection from "@/components/HeroSection";
 import Pricing from "@/components/Pricing";
@@ -16,6 +17,7 @@ export default function Home() {
       <Pricing />
       <Services />
       <Benefits />
+      <Clients />
     </main>
   );
 }
