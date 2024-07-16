@@ -10,7 +10,7 @@ import Services from "@/components/Services";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-[1780px] bg-[#f3f5f7] font-gilroy">
+    <main className="mx-auto w-full max-w-[1780px] bg-[#f3f5f7] pb-20 font-gilroy">
       <HeroSection />
       <PromotionStrip />
       <BrandsShowcase />
