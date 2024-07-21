@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/Footer";
 
 const gilroy = localFont({
   src: [
@@ -55,6 +56,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
