@@ -49,7 +49,7 @@ export default function Services() {
                 height={400}
                 width={640}
               />
-              <div className="absolute bottom-0 flex h-1/2 w-full items-end justify-between gap-4 bg-gradient-to-b from-[#00000000] to-[#1B2B53E5] p-3 transition-all sm:group-hover:h-full sm:group-hover:to-blue-950">
+              <div className="absolute bottom-0 flex h-1/2 w-full items-end justify-between gap-4 bg-gradient-to-b from-[#00000000] to-[#1B2B53E5] p-3 transition-all sm:p-4 sm:group-hover:h-full sm:group-hover:to-blue-950 md:p-6">
                 <div className="">
                   <h3 className="text-base font-extrabold text-white sm:text-2xl md:text-4xl lg:text-[40px]">
                     {item.title}
