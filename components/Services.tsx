@@ -45,6 +45,7 @@ export default function Services() {
               <Image
                 src={item.image}
                 alt={item.title}
+                loading="lazy"
                 className="object-fill object-center"
                 height={400}
                 width={640}

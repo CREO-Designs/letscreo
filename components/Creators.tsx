@@ -150,6 +150,7 @@ export default function Creators() {
               className="h-14 w-14 rounded-full"
               src={creator.src}
               alt={`${creator.name} image`}
+              loading="lazy"
               width={80}
               height={80}
             />
@@ -164,6 +165,7 @@ export default function Creators() {
                     className="h-4 w-4 rounded-full"
                     src={creator.icon}
                     alt="CREO logo"
+                    loading="lazy"
                     width={20}
                     height={20}
                   />
@@ -189,6 +191,7 @@ export default function Creators() {
               className="h-14 w-14 rounded-full md:h-20 md:w-20"
               src={creator.src}
               alt={`${creator.name} image`}
+              loading="lazy"
               width={80}
               height={80}
             />
@@ -208,6 +211,7 @@ export default function Creators() {
                     className="h-4 w-4 rounded-full md:h-5 md:w-5"
                     src={creator.icon}
                     alt="CREO logo"
+                    loading="lazy"
                     width={20}
                     height={20}
                   />

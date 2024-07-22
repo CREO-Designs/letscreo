@@ -47,6 +47,7 @@ export default function Clients() {
               <Image
                 src={client.image}
                 alt={client.companyName}
+                loading="lazy"
                 title={client.companyName}
                 className="object-fit h-12 w-12 object-contain lg:h-[70px] lg:w-[70px]"
               />

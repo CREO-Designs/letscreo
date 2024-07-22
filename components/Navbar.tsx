@@ -66,6 +66,7 @@ export default function Navbar() {
           className="h-[1.875rem] w-[4.9375rem] md:h-[3.125rem] md:w-[9.375rem] 2xl:h-[4.125rem] 2xl:w-[10.5rem]"
           src={logo}
           alt="CREO logo"
+          loading="lazy"
           width={168}
           height={66}
         />

@@ -70,6 +70,7 @@ export default function ClientsCarousel() {
                     <Image
                       src={client.image}
                       alt={`${client.name}, ${client.title}, ${client.companyName}`}
+                      loading="lazy"
                       width={600}
                       height={340}
                       className="mb-[14px] w-full sm:mb-0"

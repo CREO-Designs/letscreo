@@ -17,6 +17,7 @@ export default function ContactUs() {
       <Image
         src={contactUsAvatar}
         alt="Contact Us"
+        loading="lazy"
         width={533}
         height={533}
         className="absolute -bottom-2 right-0 h-[143px] w-[143px] sm:-right-10 sm:bottom-1/2 sm:h-[341px] sm:w-[341px] sm:translate-y-1/2 md:h-[452px] md:w-[452px] lg:right-0 lg:h-[533px] lg:w-[533px]"

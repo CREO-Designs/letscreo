@@ -10,6 +10,7 @@ export default function Footer() {
             className="mb-2 h-[56px] w-[44px] sm:h-[120px] sm:w-[94px]"
             src={mainLogo}
             alt="CREO logo"
+            loading="lazy"
             width={94}
             height={120}
           />

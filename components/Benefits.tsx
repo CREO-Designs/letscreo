@@ -82,6 +82,7 @@ export default function Benefits() {
               <Image
                 src={benefit.icon}
                 alt={benefit.title}
+                loading="lazy"
                 className="h-7 w-7 rounded-[4px] bg-[#FFE9EB] sm:h-9 sm:w-9 sm:rounded-[6px] lg:h-[50px] lg:w-[50px]"
                 height={50}
                 width={50}
