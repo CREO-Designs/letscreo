@@ -155,7 +155,7 @@ export default function Creators() {
             />
             {/* gap-1 */}
             <div className="flex flex-col">
-              <span className="break-words text-base font-extrabold text-neutral-900">
+              <span className="line-clamp-2 break-words text-base font-extrabold text-neutral-900">
                 {creator.name}
               </span>
               <div className="flex items-center gap-1">
@@ -168,7 +168,10 @@ export default function Creators() {
                     height={20}
                   />
                 )}
-                <span className="break-words text-xs font-light text-neutral-900">
+                <span
+                  title={creator.description}
+                  className="line-clamp-2 break-words text-xs font-light text-neutral-900"
+                >
                   {creator.description}
                 </span>
               </div>
@@ -190,7 +193,13 @@ export default function Creators() {
               height={80}
             />
             <div className="flex flex-col">
-              <span className="break-words text-base font-extrabold text-neutral-900 group-hover:text-white md:text-2xl">
+              <span
+                style={{
+                  wordBreak: "break-word",
+                }}
+                title={creator.name}
+                className="line-clamp-2 break-words text-base font-extrabold text-neutral-900 group-hover:text-white md:text-2xl"
+              >
                 {creator.name}
               </span>
               <div className="flex items-center gap-1">
@@ -203,7 +212,10 @@ export default function Creators() {
                     height={20}
                   />
                 )}
-                <span className="break-words text-xs font-light text-neutral-900 group-hover:text-white md:text-lg">
+                <span
+                  title={creator.description}
+                  className="line-clamp-2 break-words text-xs font-light text-neutral-900 group-hover:text-white md:text-lg"
+                >
                   {creator.description}
                 </span>
               </div>
