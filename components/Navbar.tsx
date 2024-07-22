@@ -83,12 +83,12 @@ export default function Navbar() {
         </ul>
         <div className="md:hidden">
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger>
               <div className="cursor-pointer rounded border border-[#484848] p-2">
                 <TiThMenu className="text-white" />
               </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="relative bottom-10 right-3 w-56 rounded border border-[#484848] bg-[#1E1E1E] text-white">
+            <DropdownMenuContent className="relative -bottom-1 right-4 w-56 rounded border border-[#484848] bg-[#1E1E1E] text-white">
               <ul className="flex flex-col items-start justify-center">
                 {navItems.map((item) => (
                   <Link key={item.name} href={item.href} className="w-full">
