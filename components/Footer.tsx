@@ -21,15 +21,27 @@ export default function Footer() {
         <div className="flex flex-col gap-6 text-xs text-neutral-900 sm:grid sm:grid-cols-2 sm:text-base lg:text-xl">
           <ul className="flex flex-col gap-[14px] sm:gap-8 lg:gap-[30px]">
             <li className="font-extrabold">Services</li>
-            <li>Graphic Design</li>
-            <li>Videos</li>
-            <li>UI/UI Design</li>
+            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
+              Graphic Design
+            </li>
+            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
+              Videos
+            </li>
+            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
+              UI/UI Design
+            </li>
           </ul>
           <ul className="flex flex-col gap-[14px] sm:gap-8 lg:gap-[30px]">
             <li className="font-extrabold">Others</li>
-            <li>Our Work</li>
-            <li>Pricing</li>
-            <li>Contact Us</li>
+            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
+              Our Work
+            </li>
+            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
+              Pricing
+            </li>
+            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
+              Contact Us
+            </li>
           </ul>
         </div>
       </div>
