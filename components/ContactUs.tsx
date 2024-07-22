@@ -10,7 +10,7 @@ export default function ContactUs() {
           Whether you're an individual creator or a well-established business,
           we're here to assist you in saving both time and money
         </p>
-        <button className="w-fit rounded-sm bg-rose-500 px-[19px] py-[14px] text-center text-sm font-extrabold leading-3 text-white sm:p-6 sm:py-3 sm:text-xl sm:leading-tight lg:text-2xl lg:leading-10">
+        <button className="w-fit rounded-sm bg-rose-500 px-[19px] py-[14px] text-center text-sm font-extrabold leading-3 text-white transition-shadow hover:shadow-lg sm:p-6 sm:py-3 sm:text-xl sm:leading-tight lg:text-2xl lg:leading-10">
           Contact Us
         </button>
       </div>

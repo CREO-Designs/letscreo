@@ -28,7 +28,7 @@ export default function HeroSection() {
             dedicated Design Team, delivering customized assets tailored just
             for you.
           </h2>
-          <button className="w-fit rounded-sm bg-rose-500 px-5 py-2 text-center font-extrabold leading-3 text-white sm:mb-14 sm:text-xl">
+          <button className="w-fit rounded-sm bg-rose-500 px-5 py-2 text-center font-extrabold leading-3 text-white hover:shadow-lg sm:mb-14 sm:text-xl">
             Contact Us
           </button>
         </div>
