@@ -1,27 +1,20 @@
 import Image from "next/image";
 import React from "react";
-import image1 from "@/public/brands/unacademy.png";
-import image2 from "@/public/brands/tboacademy.png";
-import image3 from "@/public/brands/ultimate-ca.png";
-import image4 from "@/public/brands/vedantu.png";
-import image5 from "@/public/brands/desi-fire-podcast.png";
-import image6 from "@/public/brands/swapnil-patni-classes.png";
-import image7 from "@/public/brands/bct.png";
-import image8 from "@/public/brands/praana.png";
 import Heading from "./Heading";
 import Section from "./Section";
 import Box from "./Box";
+import { BUCKET_URL } from "@/services/utils";
 
 export default function BrandsShowcase() {
   const brands = [
-    { src: image1, alt: "Unacademy" },
-    { src: image2, alt: "TBO Academy" },
-    { src: image3, alt: "Ultimate CA" },
-    { src: image4, alt: "Vedantu" },
-    { src: image5, alt: "Desi Fire Podcast" },
-    { src: image6, alt: "Swapnil Patni's Classes" },
-    { src: image7, alt: "BCT" },
-    { src: image8, alt: "Praana" },
+    { src: "brands/unacademy.png", alt: "Unacademy" },
+    { src: "brands/tboacademy.png", alt: "TBO Academy" },
+    { src: "brands/ultimate-ca.png", alt: "Ultimate CA" },
+    { src: "brands/vedantu.png", alt: "Vedantu" },
+    { src: "brands/desi-fire-podcast.png", alt: "Desi Fire Podcast" },
+    { src: "brands/swapnil-patni-classes.png", alt: "Swapnil Patni's Classes" },
+    { src: "brands/bct.png", alt: "BCT" },
+    { src: "brands/praana.png", alt: "Praana" },
   ];
   return (
     <Section>
@@ -34,10 +27,12 @@ export default function BrandsShowcase() {
               className="aspect-[76/58] h-full w-full sm:aspect-[150/108] md:aspect-[208/150]"
             >
               <Image
-                src={brand.src}
+                src={`${BUCKET_URL}/${brand.src}`}
                 alt={brand.alt}
                 loading="lazy"
                 className="h-full w-full object-contain"
+                width={208}
+                height={150}
               />
             </div>
           );

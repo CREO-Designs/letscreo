@@ -1,4 +1,4 @@
-import mainLogo from "@/public/main-logo.png";
+import { BUCKET_URL } from "@/services/utils";
 import Image from "next/image";
 
 export default function Footer() {
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex h-fit flex-col">
           <Image
             className="mb-2 h-[56px] w-[44px] sm:h-[120px] sm:w-[94px]"
-            src={mainLogo}
+            src={`${BUCKET_URL}/main-logo.png`}
             alt="CREO logo"
             loading="lazy"
             width={94}

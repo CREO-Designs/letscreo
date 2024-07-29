@@ -1,16 +1,8 @@
 import Heading from "./Heading";
 import Section from "./Section";
-import benefit1 from "@/public/benefits/benefit1.png";
-import benefit2 from "@/public/benefits/benefit2.png";
-import benefit3 from "@/public/benefits/benefit3.png";
-import benefit4 from "@/public/benefits/benefit4.png";
-import benefit5 from "@/public/benefits/benefit5.png";
-import benefit6 from "@/public/benefits/benefit6.png";
-import benefit7 from "@/public/benefits/benefit7.png";
-import benefit8 from "@/public/benefits/benefit8.png";
-import benefit9 from "@/public/benefits/benefit9.png";
 import Card from "./Card";
 import Image from "next/image";
+import { BUCKET_URL } from "@/services/utils";
 
 export default function Benefits() {
   const benefits = [
@@ -18,55 +10,55 @@ export default function Benefits() {
       title: "Customized Designs",
       description:
         "Our expert designers carefully curate the assets to align perfectly with your specific needs and design sensibilities.",
-      icon: benefit1,
+      icon: `benefits/benefit1.png`,
     },
     {
       title: "Affordable Prices",
       description:
         "Our prices adhere to industry standards and are fair, ensuring they fit comfortably within your budget.",
-      icon: benefit2,
+      icon: `benefits/benefit2.png`,
     },
     {
       title: "Top-Tier Designers",
       description:
         "We have a team of premium designers who dedicate their utmost effort to deliver top-notch quality.",
-      icon: benefit3,
+      icon: `benefits/benefit3.png`,
     },
     {
       title: "Elite Video Editors",
       description:
         "Our team of expert video editors and cinematographers diligently work to deliver the quality you seek.",
-      icon: benefit4,
+      icon: `benefits/benefit4.png`,
     },
     {
       title: "Express Delivery",
       description:
         "We offer express delivery options to transform your last-minute creative ideas into the desired output promptly.",
-      icon: benefit5,
+      icon: `benefits/benefit5.png`,
     },
     {
       title: "Unlimited Designs",
       description:
-        "Let your creativity flow freely—feel free to request as many creatives as you require. We prioritise them as per your need.",
-      icon: benefit6,
+        "Let your creativity flow freely—feel free to request as many creatives as you require. We prioritize them as per your need.",
+      icon: `benefits/benefit6.png`,
     },
     {
       title: "Pre & Post Production Support",
       description:
         "Our team of cinematography experts assists in planning the shoots & executes the results according to your vision.",
-      icon: benefit7,
+      icon: `benefits/benefit7.png`,
     },
     {
       title: "Industry Standard Designs",
       description:
         "Our designs meet industry standards and exceed them, consistently delivering our best results to clients.",
-      icon: benefit8,
+      icon: `benefits/benefit8.png`,
     },
     {
       title: "24/7 Customer Support",
       description:
         "We offer support for your creative needs whenever you require it. Contact us via phone or chat at your convenience.",
-      icon: benefit9,
+      icon: `benefits/benefit9.png`,
     },
   ];
   return (
@@ -80,7 +72,7 @@ export default function Benefits() {
           >
             <div className="flex items-center justify-start gap-[10px] sm:gap-3 lg:gap-[14px]">
               <Image
-                src={benefit.icon}
+                src={`${BUCKET_URL}/${benefit.icon}`}
                 alt={benefit.title}
                 loading="lazy"
                 className="h-7 w-7 rounded-[4px] bg-[#FFE9EB] sm:h-9 sm:w-9 sm:rounded-[6px] lg:h-[50px] lg:w-[50px]"

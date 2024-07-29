@@ -3,32 +3,29 @@ import Heading from "./Heading";
 import Section from "./Section";
 import Link from "next/link";
 import Card from "./Card";
-import image1 from "@/public/services/services1.png";
-import image2 from "@/public/services/services2.png";
-import image3 from "@/public/services/services3.png";
-import image4 from "@/public/services/services4.png";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { BUCKET_URL } from "@/services/utils";
 
 export default function Services() {
   const services = [
     {
       title: "Graphic Design",
-      image: image1,
+      image: "services/services1.png",
       link: "/",
     },
     {
       title: "Video Editing & Shoots",
-      image: image2,
+      image: "services/services2.png",
       link: "/",
     },
     {
       title: "UI/UX Design",
-      image: image3,
+      image: "services/services3.png",
       link: "/",
     },
     {
       title: "Presentations and Pitch Decks",
-      image: image4,
+      image: "services/services4.png",
       link: "/",
     },
   ];
@@ -43,7 +40,7 @@ export default function Services() {
               className="group relative cursor-pointer overflow-hidden"
             >
               <Image
-                src={item.image}
+                src={`${BUCKET_URL}/${item.image}`}
                 alt={item.title}
                 loading="lazy"
                 className="object-fill object-center"

@@ -1,13 +1,9 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Heading from "./Heading";
 import Section from "./Section";
 import Box from "./Box";
-import Link from "next/link";
-import Card from "./Card";
 import { randomUUID } from "crypto";
-import client1 from "@/public/clients/client1.png";
-import client2 from "@/public/clients/client2.png";
-import client3 from "@/public/clients/client3.png";
+import { BUCKET_URL } from "@/services/utils";
 
 export default function Clients() {
   const clients = [
@@ -15,7 +11,7 @@ export default function Clients() {
       name: "Anand Prakash",
       title: "Co-Founder",
       companyName: "Vedantu",
-      image: client1,
+      image: "clients/client1.png",
       videoURL:
         "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     },
@@ -23,7 +19,7 @@ export default function Clients() {
       name: "Kashish",
       title: "Marketing Head",
       companyName: "TBO Academy",
-      image: client2,
+      image: "clients/client2.png",
       videoURL:
         "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     },
@@ -31,7 +27,7 @@ export default function Clients() {
       name: "Maleka Taj",
       title: "Category Head",
       companyName: "Unacademy",
-      image: client3,
+      image: "clients/client3.png",
       videoURL:
         "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
     },
@@ -45,11 +41,13 @@ export default function Clients() {
             <video src={client.videoURL} className="w-full" controls></video>
             <div className="flex gap-3 p-6 lg:gap-4 lg:p-[22px]">
               <Image
-                src={client.image}
+                src={`${BUCKET_URL}/${client.image}`}
                 alt={client.companyName}
                 loading="lazy"
                 title={client.companyName}
                 className="object-fit h-12 w-12 object-contain lg:h-[70px] lg:w-[70px]"
+                width={70}
+                height={70}
               />
               <div className="flex flex-col">
                 <h3

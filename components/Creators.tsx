@@ -1,137 +1,111 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Heading from "./Heading";
 import Section from "./Section";
-import defaultImage from "@/public/creators/default.png";
-import creator1 from "@/public/creators/creator1.jpg";
-import creator2 from "@/public/creators/creator2.jpg";
-import creator3 from "@/public/creators/creator3.jpg";
-import creator4 from "@/public/creators/creator4.jpg";
-import creator5 from "@/public/creators/creator5.jpg";
-import creator6 from "@/public/creators/creator6.jpg";
-import creator7 from "@/public/creators/creator7.jpg";
-import creator8 from "@/public/creators/creator8.jpg";
-import creator9 from "@/public/creators/creator9.jpg";
-import creator10 from "@/public/creators/creator10.jpg";
-import creator11 from "@/public/creators/creator11.jpg";
-import creator12 from "@/public/creators/creator12.jpg";
-import creator13 from "@/public/creators/creator13.jpg";
-import creator14 from "@/public/creators/creator14.jpg";
-import creator15 from "@/public/creators/creator15.jpg";
-import creator16 from "@/public/creators/creator16.jpg";
-import creator17 from "@/public/creators/creator17.jpg";
-import youtubeLogo from "@/public/creators/youtube-logo.png";
-import instagramLogo from "@/public/creators/instagram-logo.png";
 import Box from "./Box";
-
-type creatorsType = {
-  src: StaticImageData;
-  name: string;
-  icon?: StaticImageData;
-  description: string;
-}[];
+import { BUCKET_URL } from "@/services/utils";
 
 export default function Creators() {
   const icons = {
-    youtube: youtubeLogo,
-    instagram: instagramLogo,
+    youtube: "creators/youtube-logo.png",
+    instagram: "creators/instagram-logo.png",
   };
-  const creators: creatorsType = [
+  const creators = [
     {
-      src: creator1,
+      src: "creators/creator1.jpg",
       name: "Shubham Pathak",
       icon: icons["youtube"],
       description: "975k followers",
     },
     {
-      src: creator2,
+      src: "creators/creator2.jpg",
       name: "Anuj Garg",
       icon: icons["youtube"],
       description: "534k followers",
     },
     {
-      src: creator3,
+      src: "creators/creator3.jpg",
       name: "Factovation",
       icon: icons["youtube"],
       description: "517k followers",
     },
     {
-      src: creator4,
+      src: "creators/creator4.jpg",
       name: "Harshita Singh (IITian)",
       icon: icons["youtube"],
       description: "122k followers",
     },
     {
-      src: creator5,
+      src: "creators/creator5.jpg",
       name: "Garima Bangar",
       icon: icons["youtube"],
       description: "70.6k followers",
     },
     {
-      src: creator6,
+      src: "creators/creator6.jpg",
       name: "Rushi Kale",
       icon: icons["youtube"],
       description: "61.5k followers",
     },
     {
-      src: creator7,
+      src: "creators/creator7.jpg",
       name: "Amrit Talks",
       icon: icons["youtube"],
       description: "58.5k followers",
     },
     {
-      src: creator8,
+      src: "creators/creator8.jpg",
       name: "Akansha Karnwal",
       icon: icons["youtube"],
       description: "49.2k followers",
     },
     {
-      src: creator9,
+      src: "creators/creator9.jpg",
       name: "CA Anshul Agrawal",
       icon: icons["youtube"],
       description: "40.2k followers",
     },
     {
-      src: creator10,
+      src: "creators/creator10.jpg",
       name: "Namo Kaul",
       icon: icons["youtube"],
       description: "39.9k followers",
     },
     {
-      src: creator11,
+      src: "creators/creator11.jpg",
       name: "Anand Prakash",
       description: "Co-Founder & Academic Head at Vedantu",
     },
     {
-      src: creator12,
+      src: "creators/creator12.jpg",
       name: "Honestly Payal",
       icon: icons["youtube"],
       description: "2.25k followers",
     },
     {
-      src: creator13,
+      src: "creators/creator13.jpg",
       name: "AkkabBakkadKids",
       icon: icons["youtube"],
       description: "1.53k followers",
     },
     {
-      src: creator14,
+      src: "creators/creator14.jpg",
       name: "Dilnawaz Khan",
       description: "Founder at Codesign Labs and Power Deck",
     },
     {
-      src: creator15,
+      src: "creators/creator15.jpg",
       name: "CA Ajay Vaswani",
       icon: icons["instagram"],
       description: "2.8k followers",
     },
     {
-      src: creator16,
+      src: "creators/creator16.jpg",
       name: "Aria Investments | Finance & Trading",
       icon: icons["instagram"],
       description: "1.7k followers",
     },
     {
-      src: creator17,
+      src: "creators/creator17.jpg",
       name: "Just Payal",
       icon: icons["youtube"],
       description: "134 followers",
@@ -148,7 +122,7 @@ export default function Creators() {
           >
             <Image
               className="h-14 w-14 rounded-full"
-              src={creator.src}
+              src={`${BUCKET_URL}/${creator.src}`}
               alt={`${creator.name} image`}
               loading="lazy"
               width={80}
@@ -163,7 +137,7 @@ export default function Creators() {
                 {creator?.icon && (
                   <Image
                     className="h-4 w-4 rounded-full"
-                    src={creator.icon}
+                    src={`${BUCKET_URL}/${creator.icon}`}
                     alt="CREO logo"
                     loading="lazy"
                     width={20}
@@ -189,7 +163,7 @@ export default function Creators() {
           >
             <Image
               className="h-14 w-14 rounded-full md:h-20 md:w-20"
-              src={creator.src}
+              src={`${BUCKET_URL}/${creator.src}`}
               alt={`${creator.name} image`}
               loading="lazy"
               width={80}
@@ -209,7 +183,7 @@ export default function Creators() {
                 {creator?.icon && (
                   <Image
                     className="h-4 w-4 rounded-full md:h-5 md:w-5"
-                    src={creator.icon}
+                    src={`${BUCKET_URL}/${creator.icon}`}
                     alt="CREO logo"
                     loading="lazy"
                     width={20}

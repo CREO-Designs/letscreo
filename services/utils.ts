@@ -1,1 +1,1 @@
-export const BUCKET_URL = process.env.BUCKET_URL;
+export const BUCKET_URL = process.env.NEXT_PUBLIC_BUCKET_URL;

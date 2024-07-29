@@ -11,10 +11,8 @@ import {
 } from "@/components/ui/carousel";
 import Box from "./Box";
 import Image from "next/image";
-import client1 from "@/public/clientsCarousel/client1.png";
-import client2 from "@/public/clientsCarousel/client2.png";
-import client3 from "@/public/clientsCarousel/client3.png";
 import { twMerge } from "tailwind-merge";
+import { BUCKET_URL } from "@/services/utils";
 
 export default function ClientsCarousel() {
   const [api, setApi] = useState<CarouselApi>();
@@ -24,7 +22,7 @@ export default function ClientsCarousel() {
       name: "Navin",
       title: "Assistant Director",
       companyName: "Unacademy CA Category",
-      image: client1,
+      image: "clientsCarousel/client1.png",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
@@ -32,7 +30,7 @@ export default function ClientsCarousel() {
       name: "Shwetha",
       title: "Associate Manager",
       companyName: "Unacademy CA Category",
-      image: client2,
+      image: "clientsCarousel/client2.png",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute ir.",
     },
@@ -40,7 +38,7 @@ export default function ClientsCarousel() {
       name: "Raghav",
       title: "Associate Manager",
       companyName: "TBO Academy",
-      image: client3,
+      image: "clientsCarousel/client3.png",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     },
@@ -68,7 +66,7 @@ export default function ClientsCarousel() {
                 <Box className="h-full w-full rounded-bl-none rounded-br-none p-3 pb-6 shadow-none sm:flex sm:items-center sm:p-6 md:p-8 lg:px-7 lg:py-9">
                   <div className="flex flex-col sm:grid sm:grid-cols-2 sm:items-center sm:gap-5 md:gap-8">
                     <Image
-                      src={client.image}
+                      src={`${BUCKET_URL}/${client.image}`}
                       alt={`${client.name}, ${client.title}, ${client.companyName}`}
                       loading="lazy"
                       width={600}

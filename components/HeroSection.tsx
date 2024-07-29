@@ -1,6 +1,5 @@
 import Image from "next/image";
-import banner from "@/public/banner.png";
-import heroImage from "@/public/heroImage.png";
+import { BUCKET_URL } from "@/services/utils";
 
 export default function HeroSection() {
   return (
@@ -12,7 +11,7 @@ export default function HeroSection() {
       >
         <Image
           className="absolute right-0 top-0 z-[1] h-full bg-cover"
-          src={heroImage}
+          src={`${BUCKET_URL}/heroImage.png`}
           alt="CREO banner"
           loading="lazy"
           width={1728}
@@ -35,7 +34,7 @@ export default function HeroSection() {
         </div>
         <Image
           className="z-[5] aspect-[261/142] h-fit w-full rounded-[10px] border-4 border-white bg-no-repeat object-cover object-center md:aspect-[409/490] md:w-[25.5625rem]"
-          src={banner}
+          src={`${BUCKET_URL}/banner.png`}
           alt="CREO banner"
           loading="lazy"
           width={409}
