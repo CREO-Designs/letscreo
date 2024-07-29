@@ -41,6 +41,22 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLD = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "CREO Designs",
+  alternateName: "CREO",
+  url: "https://letscreo.in",
+  logo: "https://letscreotest.s3.ap-south-1.amazonaws.com/frontend/main-logo.png",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "7899861176",
+    contactType: "customer service",
+    areaServed: "IN",
+    availableLanguage: ["en", "Hindi"],
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,6 +70,12 @@ export default function RootLayout({
           gilroy.variable,
         )}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLD),
+          }}
+        />
         <Navbar />
         {children}
         <Footer />
