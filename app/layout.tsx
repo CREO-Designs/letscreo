@@ -22,7 +22,7 @@ const gilroy = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "CREO",
+  title: "CREO Designs",
   description:
     "Your one-stop destination for cutting-edge design solutions that seamlessly blend creativity and efficiency.",
   icons: {
