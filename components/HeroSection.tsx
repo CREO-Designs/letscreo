@@ -22,9 +22,10 @@ export default function HeroSection() {
   return (
     <>
       {/* padding on top for navbar display */}
-      <script type="application/ld+json">
-        {JSON.stringify(organizationJsonLD)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLD) }}
+      />
       <section
         id="home"
         className="relative flex w-full flex-col justify-center bg-center px-6 pb-9 pt-[5.589375rem] text-white sm:pb-[4.5rem] md:flex-row md:items-center md:justify-between md:gap-12 md:px-[5.25rem] md:pt-[6.839375rem] 2xl:px-[8.75rem] 2xl:pt-[7.839375rem]"
