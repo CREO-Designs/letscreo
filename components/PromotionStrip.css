@@ -12,7 +12,9 @@
 .promotion-strip .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll 80s linear infinite;
+
+  /* !IMPORTANT: This scroll speed is doubled in development mode. So, if you see that the desired speed of scroll is coming to be 40s then just half this number and before committing it, that is, change it to 20s and save it. This is because of use of useEffect and react strict mode working are not able to work in sync when it comes to duplicate the elements in the HTML. Refer to https://youtu.be/iLmBy-HKIAw?si=0_P9-qY5QiYne6MM for more details. */
+  animation: scroll 40s linear infinite;
 }
 
 .promotion-strip .scroller[data-animated="true"] .scroller__inner:hover {
