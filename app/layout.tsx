@@ -28,14 +28,14 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        media: "(prefers-color-scheme: light)",
-        url: "/images/favicon-light-theme.png",
-        href: "/images/favicon-light-theme.png",
-      },
-      {
         media: "(prefers-color-scheme: dark)",
         url: "/images/favicon-dark-theme.png",
         href: "/images/favicon-dark-theme.png",
+      },
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/favicon-light-theme.png",
+        href: "/images/favicon-light-theme.png",
       },
     ],
   },
