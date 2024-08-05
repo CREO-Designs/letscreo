@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const gilroy = localFont({
   src: [
@@ -76,6 +77,7 @@ export default function RootLayout({
             __html: JSON.stringify(organizationJsonLD),
           }}
         />
+        <Analytics />
         <Navbar />
         {children}
         <Footer />
