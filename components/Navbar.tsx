@@ -23,8 +23,8 @@ export default function Navbar() {
       href: "/pricing",
     },
     {
-      name: "Our Work",
-      href: "/work",
+      name: "CREO Creator House",
+      href: "/creator-house",
     },
     {
       name: "Contact Us",

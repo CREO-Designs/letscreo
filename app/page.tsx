@@ -19,8 +19,8 @@ export default function Home() {
       <Pricing />
       <Services />
       <Benefits />
-      <Clients />
-      <ClientsCarousel />
+      {/* <Clients /> */}
+      {/* <ClientsCarousel /> */}
       <ContactUs />
     </main>
   );

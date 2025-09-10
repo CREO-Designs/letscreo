@@ -33,7 +33,7 @@ export default function HeroSection() {
           </button>
         </div>
         <Image
-          className="z-[5] aspect-[261/142] h-fit w-full rounded-[10px] border-4 border-white bg-no-repeat object-cover object-center md:aspect-[409/490] md:w-[25.5625rem]"
+          className="z-[5] aspect-[261/142] h-fit w-full rounded-[10px] bg-no-repeat object-contain object-center md:aspect-[409/490] md:w-[25.5625rem]"
           src={`${BUCKET_URL}/banner.png`}
           alt="CREO banner"
           loading="lazy"

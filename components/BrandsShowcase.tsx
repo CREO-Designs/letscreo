@@ -19,7 +19,7 @@ export default function BrandsShowcase() {
   return (
     <Section>
       <Heading>Brands That Love Our Designs</Heading>
-      <Box className="grid grid-cols-3 justify-items-center gap-x-5 gap-y-2 py-4 sm:gap-x-[72px] sm:gap-y-3 md:grid-cols-4 md:gap-x-[54px] md:gap-y-8 lg:gap-x-20 lg:gap-y-10">
+      <Box className="grid grid-cols-3 justify-items-center gap-x-5 gap-y-2 px-[1.875rem] py-4 sm:gap-x-[72px] sm:gap-y-3 sm:px-[4.4375rem] sm:py-8 md:grid-cols-4 md:gap-x-[54px] md:gap-y-8 md:px-[5.4375rem] md:py-10 lg:gap-x-20 lg:gap-y-10 lg:px-24 lg:py-12 xl:px-[7.75rem]">
         {brands.map((brand) => {
           return (
             <div
