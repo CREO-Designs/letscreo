@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ASSETS, NAV_ITEMS, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import { BUCKET_URL } from "@/services/utils";
 
 export default function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
@@ -48,7 +49,7 @@ export default function Navbar() {
 					className="group/logo flex items-center gap-2 text-ink"
 				>
 					<Image
-						src={ASSETS.logos.logoWithTaglineVertical}
+						src={`${BUCKET_URL}/logo-with-tagline.png`}
 						alt={`${SITE.name} logo`}
 						width={132}
 						height={50}
