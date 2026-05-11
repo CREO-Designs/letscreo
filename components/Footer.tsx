@@ -1,59 +1,113 @@
-import { BUCKET_URL } from "@/services/utils";
-import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { Eyebrow } from "@/components/ui/badge";
+import { Container } from "@/components/ui/container";
+import { NAV_ITEMS, SITE, SOCIAL_LINKS } from "@/lib/site";
+
+const SERVICES = [
+	{ name: "Brand identity", href: "/services#brand" },
+	{ name: "Graphic design", href: "/services#graphic" },
+	{ name: "Video Editing", href: "/services#video" },
+	{ name: "Video Production", href: "/services#video" },
+	{ name: "UI / UX design", href: "/services#ui-ux" },
+	{ name: "Pitch decks", href: "/services#decks" },
+];
 
 export default function Footer() {
-  return (
-    <footer>
-      <div className="flex flex-col gap-6 px-4 py-4 sm:gap-12 sm:px-8 sm:py-12 md:grid md:grid-cols-2 md:px-14 lg:px-[88px] xl:px-[204px]">
-        <div className="flex h-fit flex-col">
-          <Image
-            className="mb-2 h-[56px] w-[44px] sm:h-[120px] sm:w-[94px]"
-            src={`${BUCKET_URL}/main-logo.png`}
-            alt="CREO logo"
-            loading="lazy"
-            width={94}
-            height={120}
-          />
-          <p className="text-xs font-light leading-[18px] text-blue-950 sm:text-base sm:leading-normal lg:text-lg lg:leading-relaxed">
-            We empower our clients to articulate themselves more effectively
-            through our premium design services.
-          </p>
-        </div>
-        <div className="flex flex-col gap-6 text-xs text-neutral-900 sm:grid sm:grid-cols-2 sm:text-base lg:text-xl">
-          <ul className="flex flex-col gap-[14px] sm:gap-8 lg:gap-[30px]">
-            <li className="font-extrabold">Services</li>
-            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
-              Graphic Design
-            </li>
-            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
-              Videos
-            </li>
-            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
-              UI/UI Design
-            </li>
-          </ul>
-          <ul className="flex flex-col gap-[14px] sm:gap-8 lg:gap-[30px]">
-            <li className="font-extrabold">Others</li>
-            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
-              Our Work
-            </li>
-            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
-              Pricing
-            </li>
-            <li className="transform cursor-pointer hover:scale-[1.02] hover:underline">
-              Contact Us
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="flex items-center justify-evenly bg-blue-950 px-4 py-3 text-xs font-light text-white sm:px-8 sm:py-[21px] sm:text-base md:px-14 md:text-lg lg:px-[88px] lg:text-xl xl:px-[204px]">
-        <p>
-          <a href="mailto:info@letscreo.in">info@letscreo.in</a>
-        </p>
-        <p>
-          <a href="tel:+917899861176">+91 7899861176</a>
-        </p>
-      </div>
-    </footer>
-  );
+	const year = new Date().getFullYear();
+	return (
+		<footer className="relative overflow-hidden bg-ink text-bone">
+			<Container className="grid gap-16 py-24 md:grid-cols-12 md:gap-x-8 md:py-32">
+				<div className="md:col-span-5">
+					<Eyebrow className="text-bone/60">Let&apos;s collaborate</Eyebrow>
+					<h2 className="mt-6 font-display text-display-md font-semibold leading-[1.05] tracking-tight text-bone md:text-display-lg">
+						Bring your{" "}
+						<em className="not-italic font-display text-clay">next idea</em> to
+						life.
+					</h2>
+					<Link
+						href="/contact"
+						className="ink-link mt-10 inline-flex items-center gap-3 font-display text-h2 font-semibold text-bone md:text-h1"
+					>
+						Start a project
+						<ArrowUpRight className="size-7 transition-transform duration-DEFAULT ease-editorial group-hover:translate-x-1 group-hover:-translate-y-1" />
+					</Link>
+				</div>
+
+				<div className="md:col-span-7 md:grid md:grid-cols-3 md:gap-8">
+					<div>
+						<Eyebrow className="text-bone/60">Sitemap</Eyebrow>
+						<ul className="mt-6 space-y-3 text-body text-bone/85">
+							{NAV_ITEMS.map((item) => (
+								<li key={item.href}>
+									<Link href={item.href} className="ink-link">
+										{item.name}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
+					<div className="mt-12 md:mt-0">
+						<Eyebrow className="text-bone/60">Services</Eyebrow>
+						<ul className="mt-6 space-y-3 text-body text-bone/85">
+							{SERVICES.map((s) => (
+								<li key={s.name}>
+									<Link href={s.href} className="ink-link">
+										{s.name}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
+					<div className="mt-12 md:mt-0">
+						<Eyebrow className="text-bone/60">Connect</Eyebrow>
+						<ul className="mt-6 space-y-3 text-body text-bone/85">
+							<li>
+								<a href={`mailto:${SITE.email}`} className="ink-link">
+									{SITE.email}
+								</a>
+							</li>
+							<li>
+								<a href={`tel:${SITE.phoneRaw}`} className="ink-link">
+									{SITE.phone}
+								</a>
+							</li>
+							<li className="text-bone/60">{SITE.city}</li>
+						</ul>
+						{/* <ul className="mt-8 flex flex-wrap gap-2">
+              {SOCIAL_LINKS.map((s) => (
+                <li key={s.name}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.name}
+                    className="inline-flex size-10 items-center justify-center rounded-full border border-bone/15 text-eyebrow text-bone/70 transition-colors duration-DEFAULT ease-editorial hover:border-clay hover:bg-clay hover:text-bone"
+                  >
+                    {s.short}
+                  </a>
+                </li>
+              ))}
+            </ul> */}
+					</div>
+				</div>
+			</Container>
+
+			<div className="border-t border-bone/10">
+				<Container className="flex flex-col items-start justify-between gap-3 py-8 text-eyebrow text-bone/60 md:flex-row md:items-center">
+					<span>© {year} CREO Designs. All rights reserved.</span>
+					<span>
+						Crafted in {SITE.city.split(",")[0]} · {SITE.tagline}
+					</span>
+				</Container>
+			</div>
+
+			<div
+				aria-hidden="true"
+				className="pointer-events-none absolute -bottom-32 left-1/2 hidden -translate-x-1/2 select-none font-display text-[clamp(180px,28vw,420px)] font-light leading-none tracking-tighter text-bone/[0.03] md:block"
+			>
+				CREO
+			</div>
+		</footer>
+	);
 }
