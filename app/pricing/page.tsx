@@ -162,7 +162,7 @@ export default function PricingPage() {
 
 			{/* Tiers */}
 			<Section spacing="default">
-				<div className="grid gap-8 md:grid-cols-3">
+				<div className="grid gap-8 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
 					{TIERS.map((t, i) => (
 						<Reveal
 							key={t.name}
@@ -174,7 +174,7 @@ export default function PricingPage() {
 							}
 						>
 							<div>
-								<div className="flex items-center justify-between">
+								<div className="flex items-center justify-between flex-wrap gap-2 flex-col sm:flex-row">
 									<h3
 										className={
 											t.accent
@@ -194,7 +194,7 @@ export default function PricingPage() {
 										{t.tag}
 									</span>
 								</div>
-								<div className="mt-8 flex items-baseline gap-3">
+								<div className="mt-8 flex items-baseline flex-wrap gap-3">
 									<span
 										className={
 											t.accent
@@ -204,24 +204,26 @@ export default function PricingPage() {
 									>
 										{t.discounted}
 									</span>
-									<span
-										className={
-											t.accent
-												? "text-eyebrow text-bone/60 line-through"
-												: "text-eyebrow text-ink-300 line-through"
-										}
-									>
-										{t.starting}
-									</span>
-									<span
-										className={
-											t.accent
-												? "text-eyebrow text-bone/60"
-												: "text-eyebrow text-ink-500"
-										}
-									>
-										{t.cadence}
-									</span>
+									<div className="flex items-baseline gap-3">
+										<span
+											className={
+												t.accent
+													? "text-eyebrow text-bone/60 line-through"
+													: "text-eyebrow text-ink-300 line-through"
+											}
+										>
+											{t.starting}
+										</span>
+										<span
+											className={
+												t.accent
+													? "text-eyebrow text-bone/60"
+													: "text-eyebrow text-ink-500"
+											}
+										>
+											{t.cadence}
+										</span>
+									</div>
 								</div>
 								<p
 									className={

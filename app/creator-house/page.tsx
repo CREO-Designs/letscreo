@@ -44,7 +44,7 @@ function SectionTitle({
 	return (
 		<div
 			className={cn(
-				"mb-10 md:mb-14",
+				"mb-10 md:mb-14 break-words",
 				align === "center" && "mx-auto max-w-3xl text-center",
 			)}
 		>
@@ -504,7 +504,7 @@ export default function CreatorHousePage() {
 			{/* Tagline */}
 			<Section tone="white" spacing="loose">
 				<div className="mx-auto max-w-4xl text-center">
-					<h2 className="font-display text-display-md font-semibold tracking-tight text-ink md:text-display-lg">
+					<h2 className="break-words font-display text-display-md font-semibold tracking-tight text-ink md:text-display-lg">
 						Designed for productivity.
 						<span className="mx-2 text-clay md:mx-3">/</span>
 						Built for comfort.
